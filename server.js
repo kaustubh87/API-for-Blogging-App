@@ -53,7 +53,9 @@ app.delete('lions/:id', function(req,res){
     if(!lions[lion]){
             res.send();
     }else {
+        var deletedLion = lions[lion];
         lions.splice(lion, 1);
+        res.json(deletedLion);
     }
 });
 
