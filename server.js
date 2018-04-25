@@ -57,6 +57,10 @@ app.put('/lions/:id', function(req,res){
     if(!lions[lion]){
         res.send();
     }
+    else {
+        var updatedLion =_ .assign(lions[lion], update);
+        res.json(updatedLion);
+    }
 });
 app.delete('lions/:id', function(req,res){
     var id = req.params.id;
