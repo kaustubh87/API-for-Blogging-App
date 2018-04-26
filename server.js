@@ -13,14 +13,14 @@ var lions = [];
 
 var id = 0;
 
-/*
+
 app.get('/', function(req,res){
 
     res.sendFile(__dirname+ '/index.html', function(err){
         if(err){
            res.status(500).send(err);
         }
-    })
+    });
 });
 
 
@@ -62,6 +62,8 @@ app.put('/lions/:id', function(req,res){
         res.json(updatedLion);
     }
 });
+
+
 app.delete('lions/:id', function(req,res){
     var id = req.params.id;
     var lion = _.findIndex(lions, {id: req.params.id});
@@ -73,6 +75,8 @@ app.delete('lions/:id', function(req,res){
         res.json(deletedLion);
     }
 });
+
+
 
 app.listen(3000, function(req,res){
     console.log('Server is listening on port 3000');
