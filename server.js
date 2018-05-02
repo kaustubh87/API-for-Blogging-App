@@ -55,7 +55,8 @@ app.put('/lions/:id', function(req,res){
 
     var lion = _.findIndex(lions, {id: req.params.id});
     if(!lions[lion]){
-        res.send();
+        //res.send();
+        res.json(lion);
     }
     else {
         var updatedLion =_ .assign(lions[lion], update);
